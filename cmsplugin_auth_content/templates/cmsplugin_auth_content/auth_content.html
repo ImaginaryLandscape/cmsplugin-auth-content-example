@@ -1,0 +1,28 @@
+{% load cms_tags %}
+
+{% comment %}
+Show the authenticated version if: 
+1. The user is logged in
+2. The auth_heading field is not empty
+3. The toolbar dropdown isn't set to view unauthenticated user content
+
+Otherwise, show the default version.
+{% endcomment %}
+
+{% if request.user.is_authenticated and instance.auth_heading and request.GET.auth_view != "false" %} 
+<div class="auth-content">
+  <h1>{{ instance.auth_heading }}</h1>
+  {{ instance.auth_content }}
+  {% if instance.auth_link %}
+    <a href="{{ instance.auth_link }}">{{ instance.auth_link_text }}</a>
+  {% endif %}
+</div>
+{% else %}
+<div class="content">
+  <h1>{{ instance.heading }}</h1>
+  {{ instance.content }}
+  {% if instance.link %}
+    <a href="{{ instance.link }}">{{ instance.link_text }}</a>
+  {% endif %}  
+</div>
+{% endif %}
