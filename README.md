@@ -1,6 +1,7 @@
 # cmsplugin-auth-content-example
 
-Example django-cms plugin to follow along with blog post
+Example django-cms plugin to follow along with the blog post at:
+https://www.chicagodjango.com/blog/django-cms-plugin-authenticated-user-variations/
 
 
 Quickstart
