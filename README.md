@@ -6,12 +6,12 @@ Example django-cms plugin to follow along with blog post
 Quickstart
 ----------
 
-Install ::
+Install:
 
     pip install -e git+https://github.com/ImaginaryLandscape/cmsplugin-auth-content-example.git#egg=cmsplugin-auth-content
 
 
-Add ``cmsplugin_auth_content`` to INSTALLED_APPS::
+Add ``cmsplugin_auth_content`` to INSTALLED_APPS:
 
     INSTALLED_APPS = [
         ...
@@ -19,6 +19,6 @@ Add ``cmsplugin_auth_content`` to INSTALLED_APPS::
         ...
     ]
 
-Migrate::
+Migrate:
 
     $ python manage.py migrate
